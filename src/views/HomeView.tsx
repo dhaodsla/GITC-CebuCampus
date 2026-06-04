@@ -1,6 +1,6 @@
 import { CampType } from '../types';
 import { campInfo } from '../data';
-import { Plane, MapPin, CheckSquare, FileText, ChevronRight, User, Users, Calendar } from 'lucide-react';
+import { Plane, MapPin, CheckSquare, FileText, ChevronRight, User, Users, Calendar, CheckCircle2 } from 'lucide-react';
 import { TabType } from '../components/TopScrollNav';
 
 interface HomeViewProps {
@@ -86,6 +86,32 @@ export default function HomeView({ campType, onNavigate }: HomeViewProps) {
         >
           공항 장소 및 서류 자세히 보기 <ChevronRight className="w-4 h-4" />
         </button>
+      </section>
+
+      {/* Final Check Card */}
+      <section className="bg-slate-800 text-white rounded-3xl p-6 shadow-md relative overflow-hidden">
+        <div className="absolute -top-4 -right-2 p-4 opacity-10">
+          <CheckSquare className="w-28 h-28" />
+        </div>
+        <div className="relative z-10">
+          <h3 className="font-bold text-lg mb-1 flex items-center gap-2">
+            <CheckCircle2 className={`w-5 h-5 ${isJunior ? 'text-teal-400' : 'text-sky-400'}`} />
+            출국 당일 최종 확인
+          </h3>
+          <p className="text-slate-300 text-sm mb-4 font-medium break-keep">공항으로 출발하기 전 꼭 확인하세요!</p>
+          
+          <div className="grid grid-cols-2 gap-2.5">
+            {[
+              '여권', '항공권', 'eTravel QR코드', 
+              '휴대폰', '보조배터리', '담당자 연락처'
+            ].map((item, idx) => (
+              <div key={idx} className="flex items-center gap-2 bg-white/10 rounded-xl px-3 py-2.5">
+                <div className={`w-1.5 h-1.5 rounded-full ${isJunior ? 'bg-teal-400' : 'bg-sky-400'}`}></div>
+                <span className="text-[14px] font-bold tracking-tight">{item}</span>
+              </div>
+            ))}
+          </div>
+        </div>
       </section>
 
       {/* Quick Info */}

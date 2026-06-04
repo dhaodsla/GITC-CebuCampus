@@ -113,7 +113,7 @@ export default function CampSelector({ onSelect }: CampSelectorProps) {
               </p>
               
               <div className="inline-flex items-center text-teal-700 text-xs font-bold bg-teal-50 px-3 py-1.5 rounded-full ring-1 ring-teal-100">
-                추천 대상 : 학생만 참가하는 경우
+                학생만 참가하는 경우
               </div>
             </div>
           </motion.button>
@@ -151,7 +151,7 @@ export default function CampSelector({ onSelect }: CampSelectorProps) {
               </p>
               
               <div className="inline-flex items-center text-sky-700 text-xs font-bold bg-sky-50 px-3 py-1.5 rounded-full ring-1 ring-sky-100">
-                추천 대상 : 보호자 동반 참가
+                보호자 동반 참가
               </div>
             </div>
           </motion.button>

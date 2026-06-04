@@ -1,7 +1,7 @@
 import { motion } from 'motion/react';
 import { Home, CalendarCheck, Luggage, FileText, Briefcase, AlertTriangle, Phone } from 'lucide-react';
 
-export type TabType = 'home' | 'dday' | 'packing' | 'etravel' | 'airport' | 'caution' | 'contact';
+export type TabType = 'home' | 'dday' | 'packing' | 'etravel' | 'airport' | 'caution' | 'faq' | 'contact';
 
 interface TopScrollNavProps {
   activeTab: TabType;
@@ -20,6 +20,7 @@ export default function TopScrollNav({ activeTab, onTabChange, colorScheme }: To
     { id: 'etravel', label: 'eTravel' },
     { id: 'airport', label: '공항/서류' },
     { id: 'caution', label: '주의사항' },
+    { id: 'faq', label: 'FAQ' },
     { id: 'contact', label: '연락처' },
   ] as const;
 

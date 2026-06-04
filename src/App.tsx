@@ -17,6 +17,7 @@ import PackingView from './views/PackingView';
 import ETravelView from './views/ETravelView';
 import AirportDocView from './views/AirportDocView';
 import CautionView from './views/CautionView';
+import FaqView from './views/FaqView';
 import ContactView from './views/ContactView';
 import { Phone } from 'lucide-react';
 
@@ -46,6 +47,8 @@ export default function App() {
         return <AirportDocView campType={campType} />;
       case 'caution':
         return <CautionView campType={campType} />;
+      case 'faq':
+        return <FaqView campType={campType} />;
       case 'contact':
         return <ContactView campType={campType} />;
       default:
@@ -84,6 +87,12 @@ export default function App() {
             {renderActiveView()}
           </motion.div>
         </AnimatePresence>
+
+        {/* Footer info */}
+        <footer className="text-center py-10 pb-16 text-slate-400 text-xs font-medium space-y-1">
+          <p>최종 업데이트: 2026.06.04</p>
+          <p>항공 일정 및 미팅 장소는 확정 후 별도 안내됩니다.</p>
+        </footer>
       </main>
 
       {/* Floating Action Button for Emergency Contact */}
