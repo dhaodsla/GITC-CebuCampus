@@ -1,0 +1,6 @@
+{
+  "name": "GITC 세부캠프 출국 안내센터",
+  "description": "주니어캠프와 가족캠프 참가자를 위한 모바일 출국 안내 및 체크리스트 웹앱입니다.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
